@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team-19_Coffee Shop</title>
+    <link rel="stylesheet" href="/analysis_table.css">
+     <!-- Fonts -->
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+   />
+
+   <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
+
+</head>
+<body style="background-image: url(../img/bgcoffee.png)">
+
+    <div class="container">
+        <nav class="navbar">
+            <a href="#" class="navbar-logo"
+              ><img src="../img/logo.png" alt="Logo"
+            /></a>
+            <div class="navbar-nav">
+              <a href="../index.html">Home</a>
+              <a href="team.html">Team</a>
+              <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Analysis</a>
+                <div class="dropdown-menu">
+                  <a class="active-navbar" href="#">Table</a>
+                  <a  href="../halaman/analysis_chart.html">Chart</a>
+                </div>
+              </div>
+            </div>
+    
+            <div class="icons">
+              <div class="fas fa-search" id="search-btn"></div>
+              <div class="fas fa-heart" id="fav-btn"></div>
+              <div class="fas fa-shopping-cart" id="cart-btn"></div>
+              <div class="fas fa-bars" id="menu-btn"></div>
+            </div>
+      
+            <div class="search-form">
+              <input type="search" id="search-box" placeholder="search here..." />
+              <label for="search-box" class="fas fa-search"></label>
+            </div>
+    
+          </nav>
+
+        <h1>Tabel Data Coffee Shop Sales</h1>
+        <div class="filter-container">
+            <label for="filter-type">Filter by:</label>
+            <select id="filter-type">
+                <option value="store_location">Store Location</option>
+                <option value="product_category">Product Category</option>
+                <option value="product_type">Product Type</option>
+            </select>
+            <form>
+                <input type="text" id="filter-value" placeholder="Enter filter value">
+                <button type="button" id="filter-button">Filter</button>
+                <button id="reset-button" style="display: none;">Reset</button>
+            </form>
+                
+        </div>
+        <div class="container-table">
+            <div id="data-table"></div>
+            <div class="pagination">
+                <button id="prev-button">Previous</button>
+                <span id="page-info"></span>
+                <button id="next-button">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div>
+            <p class="footer-text">&copy; Coffee Shop</p>
+        </div>
+    </footer>
+
+ <div id="filterModal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-title">Filter Result</h2>
+      <p id="modal-content">Data ditemukan!</p>
+  </div>
+</div>
+
+    <!-- External JavaScript File -->
+    <script src="/analysis_table.js"></script>
+</body>
+</html>
+
+
+
+
+

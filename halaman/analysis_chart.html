@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop - Team 19</title>
+    <!-- Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Logo -->
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- My Style -->
+    <link rel="stylesheet" href="/analysis_chart.css" />
+  </head>
+  <body style="background-image: url(../img/bgcoffee.png)">
+      <nav class="navbar">
+        <a href="#" class="navbar-logo"
+          ><img src="../img/logo.png" alt="Logo"
+        /></a>
+        <div class="navbar-nav">
+          <a href="../index.html">Home</a>
+          <a href="../halaman/team.html">Team</a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">Analysis</a>
+            <div class="dropdown-menu">
+              <a href="../halaman/analysis_table.html">Table</a>
+              <a class="active-navbar" href="">Chart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="icons">
+          <div class="fas fa-search" id="search-btn"></div>
+          <div class="fas fa-heart" id="fav-btn"></div>
+          <div class="fas fa-shopping-cart" id="cart-btn"></div>
+          <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+  
+        <div class="search-form">
+          <input type="search" id="search-box" placeholder="search here..." />
+          <label for="search-box" class="fas fa-search"></label>
+        </div>
+
+      </nav>
+
+    <div class="container">
+      <div class="kotak_analysis-1">
+        <div class="kotak_analysis-2">
+          <div class="flex-container1">
+            <div class="flex-container2">
+              <section class="section">
+                <h1 class="chart-title">
+                  TOTAL TRANSACTION OF PRODUCT CATEGORY
+                </h1>
+                <div class="product_category-box">
+                  <canvas id="barchart1"></canvas>
+                </div>
+              </section>
+
+              <section class="section">
+                <h1 class="chart-title">TOTAL TRANSACTION IN EACH STORE</h1>
+                <div class="product_category-circle">
+                  <canvas id="chart-store"></canvas>
+                </div>
+              </section>
+
+              <aside class="transaction-product_category">
+                <div id="dropdown1" class="dropdown1">
+                  <div class="select">
+                    <span class="selected"></span>
+                    <div class="pickme"></div>
+                  </div>
+                  <ul class="menu">
+                    <li>
+                      <input type="checkbox" value="Packaged Chocolate" />
+                      Packaged Chocolate
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Branded" />
+                      Branded
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Loose Tea" />
+                      Loose Tea
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Coffee beans" />
+                      Coffee beans
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Flavours" />
+                      Flavours
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Drinking Chocolate" />
+                      Drinking Chocolate
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Bakery" />
+                      Bakery
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Tea" />
+                      Tea
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Coffee" />
+                      Coffee
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Dropdown 2 -->
+                <div id="dropdown2" class="dropdown2">
+                  <div class="select">
+                    <span class="selected">Product Detail</span>
+                    <div class="pickme"></div>
+                  </div>
+                  <ul class="menu">
+                    <li>
+                      <input type="checkbox" value="Almond Croissant" />
+                      Almond Croissant
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Brazilian - Organic" />
+                      Brazilian - Organic
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Brazilian Lg" />
+                      Brazilian Lg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Brazilian Rg" />
+                      Brazilian Rg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Brazilian Sm" />
+                      Brazilian Sm
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Cappuccino" />
+                      Cappuccino
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Cappuccino Lg" />
+                      Cappuccino Lg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Carmel syrup" />
+                      Carmel syrup
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Chili Mayan" />
+                      Chili Mayan
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Chocolate Chip Biscotti" />
+                      Chocolate Chip Biscotti
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Chocolate Croissant" />
+                      Chocolate Croissant
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Chocolate syrup" />
+                      Chocolate syrup
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Civet Cat" />
+                      Civet Cat
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Columbian Medium Roast" />
+                      Columbian Medium Roast
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        value="Columbian Medium Roast Lg"
+                      />
+                      Columbian Medium Roast Lg
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        value="Columbian Medium Roast Rg"
+                      />
+                      Columbian Medium Roast Rg
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        value="Columbian Medium Roast Sm"
+                      />
+                      Columbian Medium Roast Sm
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Cranberry Scone" />
+                      Cranberry Scone
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Croissant" />
+                      Croissant
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Dark chocolate" />
+                      Dark chocolate
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Dark chocolate Lg" />
+                      Dark chocolate Lg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Dark chocolate Rg" />
+                      Dark chocolate Rg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Earl Grey" />
+                      Earl Grey
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Earl Grey Lg" />
+                      Earl Grey Lg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Earl Grey Rg" />
+                      Earl Grey Rg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="English Breakfast" />
+                      English Breakfast
+                    </li>
+                    <li>
+                      <input type="checkbox" value="English Breakfast Lg" />
+                      English Breakfast Lg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="English Breakfast Rg" />
+                      English Breakfast Rg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Espresso Roast" />
+                      Espresso Roast
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Espresso shot" />
+                      Espresso shot
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Ethiopia" />
+                      Ethiopia
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Ethiopia Lg" />
+                      Ethiopia Lg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Ethiopia Rg" />
+                      Ethiopia Rg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Ethiopia Sm" />
+                      Ethiopia Sm
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Ginger Biscotti" />
+                      Ginger Biscotti
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Ginger Scone" />
+                      Ginger Scone
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        value="Guatemalan Sustainably Grown"
+                      />
+                      Guatemalan Sustainably Grown
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Hazelnut Biscotti" />
+                      Hazelnut Biscotti
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Hazelnut syrup" />
+                      Hazelnut syrup
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        value="I Need My Bean! Diner mug"
+                      />
+                      I Need My Bean! Diner mug
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        value="I Need My Bean! Latte cup"
+                      />
+                      I Need My Bean! Latte cup
+                    </li>
+                    <li>
+                      <input type="checkbox" value="I Need My Bean! T-shirt" />
+                      I Need My Bean! T-shirt
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Jamacian Coffee River" />
+                      Jamacian Coffee River
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Jamaican Coffee River Lg" />
+                      Jamaican Coffee River Lg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Jamaican Coffee River Rg" />
+                      Jamaican Coffee River Rg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Jamaican Coffee River Sm" />
+                      Jamaican Coffee River Sm
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Jumbo Savory Scone" />
+                      Jumbo Savory Scone
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Latte" />
+                      Latte
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Latte Rg" />
+                      Latte Rg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Lemon Grass" />
+                      Lemon Grass
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Lemon Grass Lg" />
+                      Lemon Grass Lg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Lemon Grass Rg" />
+                      Lemon Grass Rg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Morning Sunrise Chai" />
+                      Morning Sunrise Chai
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Morning Sunrise Chai Lg" />
+                      Morning Sunrise Chai Lg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Morning Sunrise Chai Rg" />
+                      Morning Sunrise Chai Rg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Oatmeal Scone" />
+                      Oatmeal Scone
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Organic Decaf Blend" />
+                      Organic Decaf Blend
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Our Old Time Diner Blend" />
+                      Our Old Time Diner Blend
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Panetone" />
+                      Panetone
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Passion Orange" />
+                      Passion Orange
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Pecan Pie" />
+                      Pecan Pie
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Pumpkin Muffin" />
+                      Pumpkin Muffin
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Raspberry Scone" />
+                      Raspberry Scone
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Regular Coffee" />
+                      Regular Coffee
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Regular Coffee Rg" />
+                      Regular Coffee Rg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Shortbread Cookie" />
+                      Shortbread Cookie
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Single Shot Espresso" />
+                      Single Shot Espresso
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Small Time Roast" />
+                      Small Time Roast
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Small Time Roast Lg" />
+                      Small Time Roast Lg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Small Time Roast Rg" />
+                      Small Time Roast Rg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Small Time Roast Sm" />
+                      Small Time Roast Sm
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Snickerdoodle" />
+                      Snickerdoodle
+                    </li>
+                    <li>
+                      <input type="checkbox" value="South American Dark" />
+                      South American Dark
+                    </li>
+                    <li>
+                      <input type="checkbox" value="South American Dark Lg" />
+                      South American Dark Lg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="South American Dark Rg" />
+                      South American Dark Rg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="South American Dark Sm" />
+                      South American Dark Sm
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Tea Time Tumbler" />
+                      Tea Time Tumbler
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Thai- Organic" />
+                      Thai- Organic
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Thai Lg" />
+                      Thai Lg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Thai Rg" />
+                      Thai Rg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Thai Sm" />
+                      Thai Sm
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Toffee Nut Latte" />
+                      Toffee Nut Latte
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Vanilla Bean" />
+                      Vanilla Bean
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Vanilla Latte" />
+                      Vanilla Latte
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Vanilla Latte Rg" />
+                      Vanilla Latte Rg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Viennese Dark" />
+                      Viennese Dark
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Viennese Dark Lg" />
+                      Viennese Dark Lg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="Viennese Dark Rg" />
+                      Viennese Dark Rg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="White chocolate" />
+                      White chocolate
+                    </li>
+                    <li>
+                      <input type="checkbox" value="White chocolate Lg" />
+                      White chocolate Lg
+                    </li>
+                    <li>
+                      <input type="checkbox" value="White chocolate Rg" />
+                      White chocolate Rg
+                    </li>
+                  </ul>
+                </div>
+                <div id="totalTransactionDiv" class="total-transaction"></div>
+              </aside>
+            </div>
+
+            <div class="flex-container2">
+              <section class="section">
+                <h1 class="chart-title">
+                  TOTAL MONTHLY TRANSACTION IN EACH STORE
+                </h1>
+                <div class="monthly-transaction">
+                  <canvas id="barchart2"></canvas>
+                </div>
+              </section>
+
+              <section class="section">
+                <h1 class="chart-title">
+                  TOTAL DAILY TRANSACTION IN EACH STORE
+                </h1>
+                <div class="daily-transaction">
+                  <canvas id="chart-daily"></canvas>
+                </div>
+              </section>
+            </div>
+
+            <div class="flex-container2">
+              <section class="section">
+                <h1 class="chart-title">
+                  TOTAL TIME TRANSACTION IN EACH STORE
+                </h1>
+                <div class="time-transaction">
+                  <canvas id="chart-time"></canvas>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p class="footer-text">&copy; Coffee Shop</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../analysis_chart.js"></script>
+  </body>
+</html>
